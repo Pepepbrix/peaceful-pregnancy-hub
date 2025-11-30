@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Heart, Star, Shield, BookOpen, Gift, Clock, CheckCircle2 } from "lucide-react";
-import ebookCover from "@/assets/ebook-cover.jpg";
+import ebookCover from "@/assets/ebook-cover.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
