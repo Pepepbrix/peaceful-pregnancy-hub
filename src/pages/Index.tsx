@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Heart, Star, Shield, BookOpen, Gift, Clock, CheckCircle2 } from "lucide-react";
-import ebookCover from "@/assets/ebook-cover-new.jpg";
+import ebookCover from "@/assets/ebook-cover-final.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
@@ -344,7 +344,7 @@ const Index = () => {
             <div className="border-t-2 border-dashed pt-6 space-y-4">
               <div className="flex items-center justify-center gap-4">
                 <span className="text-2xl text-muted-foreground line-through">$97</span>
-                <span className="text-5xl font-bold text-primary">$27</span>
+                <span className="text-5xl font-bold text-primary">$49</span>
               </div>
               <p className="text-center text-muted-foreground">One-time payment · Instant digital access</p>
             </div>
