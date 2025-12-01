@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Heart, Star, Shield, BookOpen, Gift, Clock, CheckCircle2 } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover-final.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import annaPetrova from "@/assets/anna-petrova.png";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -223,6 +224,13 @@ const Index = () => {
             <div className="text-center space-y-6 mb-12 animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold">My Story</h2>
               <p className="text-xl text-muted-foreground italic">By Anna Petrova</p>
+              <div className="flex justify-center mt-8">
+                <img 
+                  src={annaPetrova} 
+                  alt="Anna Petrova - Author and Mother of 5" 
+                  className="w-64 h-64 object-cover rounded-2xl shadow-soft"
+                />
+              </div>
             </div>
 
             <Card className="p-8 md:p-12 space-y-6 text-lg leading-relaxed border-0 shadow-card">
