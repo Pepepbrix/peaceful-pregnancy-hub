@@ -36,7 +36,7 @@ const Index = () => {
                 <Button 
                   variant="hero" 
                   size="xl"
-                  onClick={() => scrollToSection('pricing')}
+                  onClick={() => window.open('https://buy.stripe.com/4gMdRb3sR7Iv5aVeqneZ20i', '_blank')}
                   className="w-full md:w-auto"
                 >
                   <Gift className="w-6 h-6" />
@@ -353,7 +353,7 @@ const Index = () => {
               variant="hero" 
               size="xl" 
               className="w-full"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.open('https://buy.stripe.com/4gMdRb3sR7Iv5aVeqneZ20i', '_blank')}
             >
               <Gift className="w-6 h-6" />
               Get Instant Access Now
@@ -435,7 +435,7 @@ const Index = () => {
             <Button 
               variant="hero" 
               size="xl"
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => window.open('https://buy.stripe.com/4gMdRb3sR7Iv5aVeqneZ20i', '_blank')}
             >
               <Heart className="w-6 h-6" />
               Download Your Pregnancy Guide
