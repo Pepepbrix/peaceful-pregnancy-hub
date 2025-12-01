@@ -4,8 +4,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Heart, Star, Shield, BookOpen, Gift, Clock, CheckCircle2 } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover-final.png";
 import heroBg from "@/assets/hero-bg.jpg";
-// Añade la importación de la foto del autor
-import authorPhoto from "@/assets/author-photo.jpg";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -23,19 +21,9 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6 mb-12 animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold">My Story</h2>
-              <p className="text-xl text-muted-foreground italic">By Anna Petrova</p>
-            </div>
-            {/* Imagen del autor debajo del título y del subtítulo */}
-            <div className="flex justify-center mb-8">
-              <img
-                src={authorPhoto}
-                alt="Author"
-                className="w-48 h-auto rounded-xl shadow-soft object-cover"
-                style={{ maxWidth: "192px" }}
-              />
-            </div>
-            {/* Historia escrita */}
-            <Card className="p-8 md:p-12 space-y-6 text-lg leading-relaxed border-0 shadow-card">
+            <p className="text-xl text-muted-foreground italic">By Anna Petrova</p>
+          </div>
+          <Card className="p-8 md:p-12 space-y-6 text-lg leading-relaxed border-0 shadow-card">
               <p>
                 I never imagined I'd be writing this book. But life has a way of taking you where you need to go, even when the path is terrifying.
               </p>
