@@ -197,8 +197,8 @@ const Index = () => {
             </Card>
           </div>
 
-          <Card className="p-6 md:p-10 space-y-6 max-w-3xl mx-auto bg-accent/10 border-4 border-accent shadow-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 md:px-6 py-2 text-xs md:text-sm font-bold uppercase transform rotate-12 translate-x-4 md:translate-x-8 -translate-y-2">
+          <Card className="p-6 md:p-10 space-y-6 max-w-3xl mx-auto bg-accent/10 border-4 border-accent shadow-lg relative overflow-visible">
+            <div className="absolute -top-3 -right-3 bg-accent text-accent-foreground px-4 md:px-6 py-2 text-xs md:text-sm font-bold uppercase shadow-xl">
               Today Only
             </div>
             <div className="flex items-center justify-center gap-3">
