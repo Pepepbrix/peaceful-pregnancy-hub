@@ -23,28 +23,28 @@ const Index = () => {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden pb-20 md:pb-0">
       {/* Urgency Bar - Sticky */}
-      <div className={`fixed top-0 left-0 right-0 z-50 bg-accent text-accent-foreground py-2 px-4 text-center transition-transform duration-300 ${showStickyBar ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="container mx-auto flex items-center justify-center gap-2 md:gap-4 flex-wrap">
-          <span className="text-sm md:text-base font-semibold flex items-center gap-2">
-            <Clock className="w-4 h-4" />
-            Limited Time: Get 50% OFF + 3 FREE Bonuses
+      <div className={`fixed top-0 left-0 right-0 z-50 bg-accent text-accent-foreground py-2 px-3 text-center transition-transform duration-300 ${showStickyBar ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="container mx-auto flex items-center justify-center gap-2 flex-wrap">
+          <span className="text-xs md:text-base font-semibold flex items-center gap-1 md:gap-2">
+            <Clock className="w-3 h-3 md:w-4 md:h-4" />
+            <span className="hidden sm:inline">Limited Time:</span> 50% OFF + 3 FREE Bonuses
           </span>
           <Button 
             variant="secondary" 
             size="sm"
             onClick={handlePurchase}
-            className="text-xs md:text-sm"
+            className="text-xs px-2 py-1 h-auto md:px-3 md:py-1.5"
           >
-            Claim Your Copy - $49
+            Get It - $49
           </Button>
         </div>
       </div>
 
       {/* Hero Section */}
       <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
@@ -52,64 +52,64 @@ const Index = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="text-center md:text-left space-y-6 animate-fade-in-up">
+        <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center max-w-6xl mx-auto">
+            <div className="text-center md:text-left space-y-4 md:space-y-6 animate-fade-in-up order-2 md:order-1">
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur px-4 py-2 rounded-full text-sm">
+              <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm">
                 <div className="flex -space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-primary text-primary" />
                   ))}
                 </div>
                 <span className="font-medium">Trusted by 2,500+ moms</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Stop Googling at 2 AM. <span className="text-primary">Get Real Answers</span> for Every Stage of Your Pregnancy.
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground font-light">
+              <p className="text-sm sm:text-base md:text-xl text-muted-foreground font-light">
                 The complete week-by-week guide that tells you <strong>exactly</strong> what's happening with your body, what symptoms are normal, and what to do about them — written by a mom of 5.
               </p>
               
               {/* Key Benefits Pills */}
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                <span className="bg-primary/10 text-foreground px-3 py-1 rounded-full text-sm font-medium">✓ Morning sickness relief</span>
-                <span className="bg-primary/10 text-foreground px-3 py-1 rounded-full text-sm font-medium">✓ Sleep solutions</span>
-                <span className="bg-primary/10 text-foreground px-3 py-1 rounded-full text-sm font-medium">✓ Birth prep checklist</span>
+              <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center md:justify-start">
+                <span className="bg-primary/10 text-foreground px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium">✓ Morning sickness relief</span>
+                <span className="bg-primary/10 text-foreground px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium">✓ Sleep solutions</span>
+                <span className="bg-primary/10 text-foreground px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium">✓ Birth prep checklist</span>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <Button 
                   variant="hero" 
-                  size="xl"
+                  size="lg"
                   onClick={handlePurchase}
-                  className="w-full md:w-auto group"
+                  className="w-full md:w-auto group text-sm md:text-base"
                 >
-                  <Gift className="w-6 h-6 group-hover:animate-pulse" />
+                  <Gift className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" />
                   Yes! I Want This Guide - Only $49
                 </Button>
-                <div className="flex items-center justify-center md:justify-start gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground">
                   <span className="flex items-center gap-1">
-                    <Shield className="w-4 h-4" /> 30-Day Guarantee
+                    <Shield className="w-3 h-3 md:w-4 md:h-4" /> 30-Day Guarantee
                   </span>
                   <span className="flex items-center gap-1">
-                    <Zap className="w-4 h-4" /> Instant Download
+                    <Zap className="w-3 h-3 md:w-4 md:h-4" /> Instant Download
                   </span>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center animate-fade-in-up animate-delay-200">
+            <div className="flex justify-center animate-fade-in-up animate-delay-200 order-1 md:order-2">
               <div className="relative">
                 <img 
                   src={ebookCover} 
                   alt="The Peaceful Pregnancy Blueprint eBook Cover" 
-                  className="w-full max-w-md rounded-2xl shadow-soft hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="w-48 sm:w-64 md:w-full md:max-w-md rounded-2xl shadow-soft hover:shadow-lg transition-all duration-300 hover:scale-105"
                 />
                 {/* Price Badge */}
-                <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold shadow-lg">
-                  <span className="line-through text-sm opacity-70">$97</span>
-                  <span className="text-xl ml-2">$49</span>
+                <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 bg-accent text-accent-foreground px-2 py-1 md:px-4 md:py-2 rounded-full font-bold shadow-lg text-sm md:text-base">
+                  <span className="line-through text-xs md:text-sm opacity-70">$97</span>
+                  <span className="text-base md:text-xl ml-1 md:ml-2">$49</span>
                 </div>
               </div>
             </div>
@@ -118,13 +118,13 @@ const Index = () => {
       </section>
 
       {/* Problem/Agitation Section */}
-      <section className="py-16 bg-card">
+      <section className="py-10 md:py-16 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">
+          <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
+            <h2 className="text-2xl md:text-4xl font-bold">
               Sound Familiar?
             </h2>
-            <div className="grid md:grid-cols-2 gap-4 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-left">
               {[
                 "You're constantly worried if what you're feeling is normal",
                 "Google searches only make you more anxious",
@@ -133,13 +133,13 @@ const Index = () => {
                 "Sleep has become impossible and you're exhausted",
                 "You're nervous about labor and don't know how to prepare",
               ].map((problem, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-4 bg-background rounded-lg">
-                  <AlertTriangle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <p className="text-muted-foreground">{problem}</p>
+                <div key={idx} className="flex items-start gap-2 md:gap-3 p-3 md:p-4 bg-background rounded-lg">
+                  <AlertTriangle className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <p className="text-sm md:text-base text-muted-foreground">{problem}</p>
                 </div>
               ))}
             </div>
-            <p className="text-xl font-medium pt-4">
+            <p className="text-base md:text-xl font-medium pt-2 md:pt-4">
               You're not alone. And there's a better way. 👇
             </p>
           </div>
@@ -147,18 +147,18 @@ const Index = () => {
       </section>
 
       {/* Solution/Benefits Section */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-12 md:py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-6 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
               What You'll Get Inside This Guide
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Practical, actionable information you can use <strong>today</strong>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
             {[
               { icon: Apple, title: "Nutrition Plans That Work", desc: "Know exactly what to eat (and avoid) each trimester for a healthy baby and more energy" },
               { icon: Moon, title: "Sleep Solutions", desc: "Proven positions and routines to finally get restful sleep, even in the third trimester" },
@@ -169,26 +169,27 @@ const Index = () => {
             ].map((benefit, idx) => (
               <Card 
                 key={idx} 
-                className="p-8 text-center space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                className="p-5 md:p-8 text-center space-y-3 md:space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                  <benefit.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                  <benefit.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.desc}</p>
+                <h3 className="text-lg md:text-xl font-semibold">{benefit.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground">{benefit.desc}</p>
               </Card>
             ))}
           </div>
 
           {/* Mid-page CTA */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <Button 
               variant="hero" 
-              size="xl"
+              size="lg"
               onClick={handlePurchase}
+              className="text-sm md:text-base"
             >
-              <Gift className="w-6 h-6" />
+              <Gift className="w-5 h-5 md:w-6 md:h-6" />
               Get The Complete Guide - $49
             </Button>
           </div>
@@ -196,22 +197,22 @@ const Index = () => {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-6 mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-              <Star className="w-5 h-5 fill-primary text-primary" />
-              <span className="font-semibold">4.9/5 Average Rating</span>
+          <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1.5 md:px-4 md:py-2 rounded-full">
+              <Star className="w-4 h-4 md:w-5 md:h-5 fill-primary text-primary" />
+              <span className="font-semibold text-sm md:text-base">4.9/5 Average Rating</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
               Real Moms, Real Results
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Join thousands of moms who went from anxious to confident
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
             {[
               { 
                 name: "Sarah Mitchell", 
@@ -264,21 +265,21 @@ const Index = () => {
             ].map((testimonial, idx) => (
               <Card 
                 key={idx}
-                className="p-6 space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 animate-fade-in-up"
+                className="p-4 md:p-6 space-y-3 md:space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-foreground italic">"{testimonial.quote}"</p>
-                <div className="bg-primary/10 px-3 py-1 rounded-full text-sm font-medium text-primary inline-block">
+                <p className="text-sm md:text-base text-foreground italic">"{testimonial.quote}"</p>
+                <div className="bg-primary/10 px-2 py-0.5 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium text-primary inline-block">
                   ✓ {testimonial.result}
                 </div>
                 <div className="pt-2 border-t">
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location} • {testimonial.context}</p>
+                  <p className="font-semibold text-sm md:text-base">{testimonial.name}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">{testimonial.location} • {testimonial.context}</p>
                 </div>
               </Card>
             ))}
@@ -287,18 +288,18 @@ const Index = () => {
       </section>
 
       {/* Chapters Preview */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-12 md:py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-6 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
               21 Comprehensive Chapters
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               240+ pages of practical guidance for every stage
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 max-w-5xl mx-auto">
             {[
               { num: 1, title: "Understanding Your Changing Body", desc: "What's normal, what's not, and when to call your doctor" },
               { num: 2, title: "First Trimester Survival Guide", desc: "Beat fatigue, nausea, and mood swings" },
@@ -315,104 +316,104 @@ const Index = () => {
             ].map((chapter, idx) => (
               <div 
                 key={idx}
-                className="flex items-start gap-4 p-4 bg-card rounded-lg shadow-sm"
+                className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-lg shadow-sm"
               >
-                <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-sm">{chapter.num}</span>
+                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-xs md:text-sm">{chapter.num}</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold">{chapter.title}</h3>
-                  <p className="text-sm text-muted-foreground">{chapter.desc}</p>
+                  <h3 className="font-semibold text-sm md:text-base">{chapter.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">{chapter.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-muted-foreground mt-6">+ 9 more chapters covering breastfeeding, newborn care, emotional wellness, and more</p>
+          <p className="text-center text-xs md:text-base text-muted-foreground mt-4 md:mt-6">+ 9 more chapters covering breastfeeding, newborn care, emotional wellness, and more</p>
         </div>
       </section>
 
       {/* Bonuses Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-12 md:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-6 mb-16 animate-fade-in-up">
-            <div className="inline-block px-6 py-2 bg-accent/20 rounded-full">
-              <p className="text-sm font-semibold uppercase tracking-wide">🎁 FREE Bonuses Included</p>
+          <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+            <div className="inline-block px-4 md:px-6 py-1.5 md:py-2 bg-accent/20 rounded-full">
+              <p className="text-xs md:text-sm font-semibold uppercase tracking-wide">🎁 FREE Bonuses Included</p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
               $97 Worth of Bonuses — FREE Today
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-            <Card className="p-8 space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                <Gift className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto mb-6 md:mb-12">
+            <Card className="p-5 md:p-8 space-y-3 md:space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                <Gift className="w-6 h-6 md:w-8 md:h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-center">BONUS #1</h3>
-              <h4 className="text-xl font-semibold text-center">Self-Care Rituals Checklist</h4>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-lg md:text-2xl font-bold text-center">BONUS #1</h3>
+              <h4 className="text-base md:text-xl font-semibold text-center">Self-Care Rituals Checklist</h4>
+              <p className="text-sm md:text-base text-muted-foreground text-center">
                 10-minute daily routines to reduce stress, improve sleep, and keep your energy up throughout pregnancy.
               </p>
-              <p className="text-center font-semibold text-primary">Value: $37 — FREE</p>
+              <p className="text-center font-semibold text-primary text-sm md:text-base">Value: $37 — FREE</p>
             </Card>
 
-            <Card className="p-8 space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                <Heart className="w-8 h-8 text-primary" />
+            <Card className="p-5 md:p-8 space-y-3 md:space-y-4 bg-card border-0 shadow-card hover:shadow-soft transition-all duration-300 hover:scale-105">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-center">BONUS #2</h3>
-              <h4 className="text-xl font-semibold text-center">7-Day Emotional Reset Plan</h4>
-              <p className="text-muted-foreground text-center">
+              <h3 className="text-lg md:text-2xl font-bold text-center">BONUS #2</h3>
+              <h4 className="text-base md:text-xl font-semibold text-center">7-Day Emotional Reset Plan</h4>
+              <p className="text-sm md:text-base text-muted-foreground text-center">
                 A step-by-step guide to manage pregnancy mood swings, reduce anxiety, and feel emotionally balanced.
               </p>
-              <p className="text-center font-semibold text-primary">Value: $27 — FREE</p>
+              <p className="text-center font-semibold text-primary text-sm md:text-base">Value: $27 — FREE</p>
             </Card>
           </div>
 
-          <Card className="p-6 md:p-10 space-y-6 max-w-3xl mx-auto bg-accent/10 border-4 border-accent shadow-lg relative overflow-visible">
-            <div className="absolute -top-3 -right-3 bg-accent text-accent-foreground px-4 md:px-6 py-2 text-xs md:text-sm font-bold uppercase shadow-xl">
+          <Card className="p-4 md:p-10 space-y-4 md:space-y-6 max-w-3xl mx-auto bg-accent/10 border-2 md:border-4 border-accent shadow-lg relative overflow-visible">
+            <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-accent text-accent-foreground px-3 md:px-6 py-1 md:py-2 text-xs font-bold uppercase shadow-xl rounded-sm">
               Today Only
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <Clock className="w-10 h-10 text-accent" />
-              <h3 className="text-2xl md:text-3xl font-bold text-center">LIMITED TIME BONUS #3</h3>
+            <div className="flex items-center justify-center gap-2 md:gap-3">
+              <Clock className="w-6 h-6 md:w-10 md:h-10 text-accent" />
+              <h3 className="text-lg md:text-3xl font-bold text-center">LIMITED TIME BONUS #3</h3>
             </div>
-            <h4 className="text-xl md:text-2xl font-semibold text-center">Newborn Sleep Schedule Template</h4>
-            <p className="text-muted-foreground text-center">
+            <h4 className="text-base md:text-2xl font-semibold text-center">Newborn Sleep Schedule Template</h4>
+            <p className="text-sm md:text-base text-muted-foreground text-center">
               The exact feeding and sleeping schedule that helped Anna's 5 babies sleep through the night by 8 weeks. Worth its weight in gold for exhausted new parents.
             </p>
-            <p className="text-center text-2xl font-bold text-accent">Value: $33 — FREE (Today Only)</p>
-            <div className="bg-accent/20 rounded-lg p-4 text-center">
-              <p className="text-sm font-semibold">⚡ This bonus disappears at midnight. Order now to claim it!</p>
+            <p className="text-center text-lg md:text-2xl font-bold text-accent">Value: $33 — FREE (Today Only)</p>
+            <div className="bg-accent/20 rounded-lg p-3 md:p-4 text-center">
+              <p className="text-xs md:text-sm font-semibold">⚡ This bonus disappears at midnight. Order now to claim it!</p>
             </div>
           </Card>
         </div>
       </section>
 
       {/* Author Section - Shorter */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div className="text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
+              <div className="text-center">
                 <img 
                   src={annaPetrova} 
                   alt="Anna Petrova - Author and Mother of 5" 
-                  className="w-48 h-48 object-cover rounded-2xl shadow-soft mx-auto md:mx-0"
+                  className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-2xl shadow-soft mx-auto"
                 />
               </div>
-              <div className="md:col-span-2 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold">Meet Anna Petrova</h2>
-                <p className="text-lg text-muted-foreground">
+              <div className="md:col-span-2 space-y-3 md:space-y-4 text-center md:text-left">
+                <h2 className="text-2xl md:text-4xl font-bold">Meet Anna Petrova</h2>
+                <p className="text-base md:text-lg text-muted-foreground">
                   Russian-born American author and <strong>mother of 5 children</strong>.
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   "I wrote this guide because I wish I had it during my first pregnancy. I was terrified, alone in a new country, with no support system. Every doctor's visit felt confusing. Every symptom made me panic."
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   "After 5 pregnancies, I've learned what actually works. This guide is everything I know — the practical tips, the emotional support, the reassurance that you're going to be okay."
                 </p>
-                <p className="font-semibold text-primary">
+                <p className="font-semibold text-primary text-sm md:text-base">
                   "You're not alone. And you're going to be an amazing mother."
                 </p>
               </div>
@@ -422,74 +423,74 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gradient-section">
+      <section id="pricing" className="py-12 md:py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-6 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
               Get Everything for Just $49
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Less than a single prenatal appointment
             </p>
           </div>
 
-          <Card className="max-w-3xl mx-auto p-8 md:p-10 space-y-8 border-4 border-primary shadow-lg">
-            <div className="text-center space-y-2">
-              <h3 className="text-2xl md:text-3xl font-bold">The Peaceful Pregnancy Blueprint</h3>
-              <p className="text-muted-foreground">Complete Digital Package — Instant Access</p>
+          <Card className="max-w-3xl mx-auto p-4 md:p-10 space-y-5 md:space-y-8 border-2 md:border-4 border-primary shadow-lg">
+            <div className="text-center space-y-1 md:space-y-2">
+              <h3 className="text-xl md:text-3xl font-bold">The Peaceful Pregnancy Blueprint</h3>
+              <p className="text-sm md:text-base text-muted-foreground">Complete Digital Package — Instant Access</p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2 md:space-y-3">
               {[
                 { item: "The Complete 21-Chapter Pregnancy Guide (240+ pages)", value: "$67" },
                 { item: "BONUS: Self-Care Rituals Checklist", value: "$37" },
                 { item: "BONUS: 7-Day Emotional Reset Plan", value: "$27" },
                 { item: "TODAY ONLY: Newborn Sleep Schedule Template", value: "$33" },
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center justify-between p-3 bg-accent/5 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <p className="text-sm md:text-base">{item.item}</p>
+                <div key={idx} className="flex items-center justify-between p-2 md:p-3 bg-accent/5 rounded-lg gap-2">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                    <p className="text-xs md:text-base">{item.item}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap">{item.value}</span>
+                  <span className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">{item.value}</span>
                 </div>
               ))}
             </div>
 
-            <div className="border-t-2 border-dashed pt-6 space-y-2">
-              <div className="flex items-center justify-between px-4">
-                <span className="text-lg">Total Value:</span>
-                <span className="text-xl line-through text-muted-foreground">$164</span>
+            <div className="border-t-2 border-dashed pt-4 md:pt-6 space-y-1 md:space-y-2">
+              <div className="flex items-center justify-between px-2 md:px-4">
+                <span className="text-sm md:text-lg">Total Value:</span>
+                <span className="text-base md:text-xl line-through text-muted-foreground">$164</span>
               </div>
-              <div className="flex items-center justify-between px-4">
-                <span className="text-xl font-bold">Your Price Today:</span>
-                <span className="text-4xl font-bold text-primary">$49</span>
+              <div className="flex items-center justify-between px-2 md:px-4">
+                <span className="text-base md:text-xl font-bold">Your Price Today:</span>
+                <span className="text-2xl md:text-4xl font-bold text-primary">$49</span>
               </div>
-              <p className="text-center text-sm text-muted-foreground">You save $115 (70% OFF)</p>
+              <p className="text-center text-xs md:text-sm text-muted-foreground">You save $115 (70% OFF)</p>
             </div>
 
             <Button 
               variant="hero" 
-              size="xl" 
-              className="w-full text-lg"
+              size="lg" 
+              className="w-full text-sm md:text-lg"
               onClick={handlePurchase}
             >
-              <Gift className="w-6 h-6" />
+              <Gift className="w-5 h-5 md:w-6 md:h-6" />
               Yes! Give Me Instant Access
             </Button>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm">
-              <span className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-primary" />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-xs md:text-sm">
+              <span className="flex items-center gap-1 md:gap-2">
+                <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 <span className="font-medium">30-Day Money-Back Guarantee</span>
               </span>
-              <span className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-primary" />
+              <span className="flex items-center gap-1 md:gap-2">
+                <Zap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 <span className="font-medium">Instant PDF Download</span>
               </span>
             </div>
 
-            <p className="text-center text-sm text-muted-foreground">
+            <p className="text-center text-xs md:text-sm text-muted-foreground">
               ✓ Instant access after purchase ✓ Works on any device ✓ Keep forever
             </p>
           </Card>
@@ -497,17 +498,17 @@ const Index = () => {
       </section>
 
       {/* Guarantee Section */}
-      <section className="py-16 bg-card">
+      <section className="py-10 md:py-16 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <Shield className="w-16 h-16 text-primary mx-auto" />
-            <h2 className="text-3xl md:text-4xl font-bold">
+          <div className="max-w-3xl mx-auto text-center space-y-4 md:space-y-6">
+            <Shield className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto" />
+            <h2 className="text-2xl md:text-4xl font-bold">
               100% Risk-Free Guarantee
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm md:text-lg text-muted-foreground">
               Try the guide for 30 days. If you don't feel more confident, calm, and prepared for your pregnancy journey, email us and we'll refund every penny. No questions asked. No hard feelings.
             </p>
-            <p className="font-semibold text-primary">
+            <p className="font-semibold text-primary text-sm md:text-base">
               Your satisfaction is my priority — always.
             </p>
           </div>
@@ -515,16 +516,16 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-section">
+      <section className="py-12 md:py-20 bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center space-y-6 mb-16 animate-fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold">
+            <div className="text-center space-y-3 md:space-y-6 mb-8 md:mb-16 animate-fade-in-up">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
                 Frequently Asked Questions
               </h2>
             </div>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
               {[
                 {
                   q: "Is this guide right for first-time moms?",
@@ -551,11 +552,11 @@ const Index = () => {
                   a: "Yes, all information follows established pregnancy guidelines. However, this guide is meant to complement — not replace — advice from your healthcare provider. Always consult your doctor for personalized medical decisions."
                 },
               ].map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="bg-card border-0 shadow-card rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                <AccordionItem key={idx} value={`item-${idx}`} className="bg-card border-0 shadow-card rounded-lg px-4 md:px-6">
+                  <AccordionTrigger className="text-left text-sm md:text-lg font-semibold hover:text-primary">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-sm md:text-base text-muted-foreground">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -566,26 +567,26 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-12 md:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <div className="max-w-3xl mx-auto text-center space-y-5 md:space-y-8">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
               You Deserve to Feel Confident During Your Pregnancy
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Stop the endless googling. Stop the 2 AM anxiety. Get the answers you need, all in one place, from a mom who truly understands.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               <Button 
                 variant="hero" 
-                size="xl"
+                size="lg"
                 onClick={handlePurchase}
-                className="text-lg"
+                className="text-sm md:text-lg"
               >
-                <Heart className="w-6 h-6" />
+                <Heart className="w-5 h-5 md:w-6 md:h-6" />
                 Get Instant Access — Only $49
               </Button>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 ✓ Instant download ✓ 30-day guarantee ✓ All 3 bonuses included
               </p>
             </div>
@@ -594,12 +595,12 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-background border-t">
-        <div className="container mx-auto px-4 text-center space-y-4">
-          <p className="text-muted-foreground">
+      <footer className="py-8 md:py-12 bg-background border-t">
+        <div className="container mx-auto px-4 text-center space-y-3 md:space-y-4">
+          <p className="text-sm md:text-base text-muted-foreground">
             © 2024 The Peaceful Pregnancy Blueprint. Written with love by Anna Petrova.
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs md:text-sm text-muted-foreground">
             All rights reserved. This content is for informational purposes only and does not replace professional medical advice.
           </p>
         </div>
